@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Mute Tab",
+  "version": "1.0",
+  "description": "Click the icon to mute or unmute the current tab.",
+  "permissions": ["tabs"],
+  "action": {
+    "default_title": "Mute Tab",
+    "default_icon": {
+      "16": "icons/icon.png",
+      "32": "icons/icon.png",
+      "48": "icons/icon.png",
+      "128": "icons/icon.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "icons/icon.png",
+    "32": "icons/icon.png",
+    "48": "icons/icon.png",
+    "128": "icons/icon.png"
+  }
+}
