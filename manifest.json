@@ -1,11 +1,17 @@
 {
   "manifest_version": 3,
   "name": "Mute Tab",
-  "version": "1.0",
-  "description": "Click the icon to mute or unmute the current tab.",
-  "permissions": ["tabs"],
+  "version": "2.0",
+  "description": "Control tab volume and mute/unmute functionality with an easy-to-use interface.",
+  "permissions": [
+    "tabs",
+    "storage",
+    "scripting",
+    "activeTab"
+  ],
   "action": {
-    "default_title": "Mute Tab",
+    "default_title": "Volume Control",
+    "default_popup": "popup.html",
     "default_icon": {
       "16": "icons/icon.png",
       "32": "icons/icon.png",
@@ -13,6 +19,17 @@
       "128": "icons/icon.png"
     }
   },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_start"
+    }
+  ],
   "background": {
     "service_worker": "background.js"
   },

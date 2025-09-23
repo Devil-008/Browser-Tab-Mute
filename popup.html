@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volume Control</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Tab Volume Control</h2>
+        </div>
+        
+        <div class="volume-section">
+            <div class="volume-label">
+                <span>Volume</span>
+                <span id="volumeValue">100%</span>
+            </div>
+            <div class="volume-slider-container">
+                <input type="range" id="volumeSlider" min="0" max="100" value="100" class="volume-slider">
+            </div>
+        </div>
+        
+        <div class="controls">
+            <button id="muteBtn" class="control-btn mute-btn">
+                <span id="muteIcon">🔊</span>
+                <span id="muteText">Mute</span>
+            </button>
+            <button id="resetBtn" class="control-btn reset-btn">
+                <span>↻</span>
+                Reset
+            </button>
+        </div>
+        
+        <div class="info">
+            <span id="tabInfo">Loading...</span>
+        </div>
+    </div>
+    
+    <script src="popup.js"></script>
+</body>
+</html>
